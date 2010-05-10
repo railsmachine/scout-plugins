@@ -70,6 +70,11 @@ class MysqlQueryStatistics < Scout::Plugin
     end
     counter(:total, total, :per=>:second)
 
+    result = mysql.query('SHOW PROCESSLIST')
+    process_val = result.num_rows
+    result.free
+    report_hash['process'] = process_val
+
     return if days == nil # blank (or nil) means don't run tuner
     days=days.to_i
     last_run = memory(:tuner_last_run)
