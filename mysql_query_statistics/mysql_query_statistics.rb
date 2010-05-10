@@ -38,6 +38,11 @@ class MysqlQueryStatistics < Scout::Plugin
       report_hash[name] = value
     end
 
+    result = mysql.query('SHOW PROCESSLIST')
+    process_val = result.num_rows
+    result.free
+    report_hash['process'] = process_val
+
 
     total_val = calculate_counter(now, 'total', total)
     report_hash['total'] = total_val if total_val

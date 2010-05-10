@@ -36,6 +36,9 @@ metadata:
   total:
     label: Total Queries
     units: /sec
+  process:
+    label: Processes
+    precision: 0
 
 triggers:    
   - type: trend
