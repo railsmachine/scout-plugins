@@ -1,0 +1,5 @@
+options:
+  url:
+    default: http://localhost/mod_pagespeed_statistics
+    name: URL
+    notes: URL for mod_pagespeed statistics

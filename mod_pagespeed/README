@@ -1,0 +1,10 @@
+Redis Info Plugin
+======================
+Created by [Josh Nichols](http://technicalpickles.com)
+
+Overview
+------------
+
+Provides statistics collected by [mod_pagespeed](http://code.google.com/speed/page-speed/docs/module.html)
+
+You'll just need to follow the [getting started guide](http://code.google.com/speed/page-speed/docs/module.html), especially setting up the `mod_pagespeed_statistics` handler 
