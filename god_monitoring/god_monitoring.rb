@@ -1,7 +1,7 @@
 class GodMonitoring < Scout::Plugin
   def build_report
-    god_command = option(:god_command_name) || "god"
-    pgrep_output = `pgrep #{god_command}`
+    god_command = option(:god_command_name) || "/usr/bin/god"
+    pgrep_output = `pgrep -f #{god_command}`
 
     god_processes = pgrep_output.split(/\n/)
     report :god_processes => god_processes.size
