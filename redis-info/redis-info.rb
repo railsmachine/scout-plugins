@@ -4,7 +4,7 @@ class RedisMonitor < Scout::Plugin
   OPTIONS = <<-EOS
   client_host:
     name: Host
-    notes: "You will generally want this to be 'localhost'"
+    notes: "Redis hostname (or IP address) to pass to the client library, ie where redis is running.  "
     default: localhost
   client_port:
     name: Port
